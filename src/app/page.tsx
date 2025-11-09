@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="w-full py-16 md:py-24 lg:py-32">
+      <section className="w-full py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-6 md:px-12 lg:px-16 text-center">
           {/* Logo */}
           <div className="mb-8">
@@ -45,7 +45,7 @@ export default function Home() {
       </section>
 
       {/* What Makes Us Different Section */}
-      <section className="w-full py-16 md:py-24 lg:py-32 border-t" style={{ borderColor: 'var(--color-border)' }}>
+      <section className="w-full py-16 md:py-24 border-t" style={{ borderColor: 'var(--color-border)' }}>
         <div className="max-w-4xl mx-auto px-6 md:px-12 lg:px-16 text-center">
           {/* Section Title */}
           <h2 className="mb-6">
@@ -66,7 +66,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="w-full py-16 md:py-24 lg:py-32 border-t" style={{ borderColor: 'var(--color-border)' }}>
+      <section className="w-full py-16 md:py-24 border-t" style={{ borderColor: 'var(--color-border)' }}>
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
           {/* Section Title */}
           <div className="text-center mb-12 md:mb-16">
@@ -87,7 +87,7 @@ export default function Home() {
               }}
             >
               {/* Icon */}
-              <div className="mb-6">
+              <div className="mb-6" aria-hidden="true">
                 <svg
                   width="48"
                   height="48"
@@ -139,7 +139,7 @@ export default function Home() {
               }}
             >
               {/* Icon */}
-              <div className="mb-6">
+              <div className="mb-6" aria-hidden="true">
                 <svg
                   width="48"
                   height="48"
@@ -189,7 +189,7 @@ export default function Home() {
               }}
             >
               {/* Icon */}
-              <div className="mb-6">
+              <div className="mb-6" aria-hidden="true">
                 <svg
                   width="48"
                   height="48"
@@ -235,7 +235,7 @@ export default function Home() {
       </section>
 
       {/* Company Values/Approach Section */}
-      <section className="w-full py-16 md:py-24 lg:py-32 border-t" style={{ borderColor: 'var(--color-border)' }}>
+      <section className="w-full py-16 md:py-24 border-t" style={{ borderColor: 'var(--color-border)' }}>
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
           {/* Section Title */}
           <div className="text-center mb-12 md:mb-16">
@@ -249,7 +249,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
             {/* Value 1: Innovative */}
             <div className="text-center">
-              <div className="mb-4 flex justify-center">
+              <div className="mb-4 flex justify-center" aria-hidden="true">
                 <svg
                   width="40"
                   height="40"
@@ -273,7 +273,7 @@ export default function Home() {
 
             {/* Value 2: Quality-Focused */}
             <div className="text-center">
-              <div className="mb-4 flex justify-center">
+              <div className="mb-4 flex justify-center" aria-hidden="true">
                 <svg
                   width="40"
                   height="40"
@@ -295,7 +295,7 @@ export default function Home() {
 
             {/* Value 3: Minimalistic */}
             <div className="text-center">
-              <div className="mb-4 flex justify-center">
+              <div className="mb-4 flex justify-center" aria-hidden="true">
                 <svg
                   width="40"
                   height="40"
@@ -318,7 +318,7 @@ export default function Home() {
 
             {/* Value 4: Efficient */}
             <div className="text-center">
-              <div className="mb-4 flex justify-center">
+              <div className="mb-4 flex justify-center" aria-hidden="true">
                 <svg
                   width="40"
                   height="40"
@@ -340,7 +340,7 @@ export default function Home() {
 
             {/* Value 5: Responsible */}
             <div className="text-center">
-              <div className="mb-4 flex justify-center">
+              <div className="mb-4 flex justify-center" aria-hidden="true">
                 <svg
                   width="40"
                   height="40"
@@ -365,7 +365,7 @@ export default function Home() {
 
       {/* Final CTA Section */}
       <section
-        className="w-full py-16 md:py-24 lg:py-32 border-t"
+        className="w-full py-16 md:py-24 border-t"
         style={{
           borderColor: 'var(--color-border)',
           backgroundColor: 'var(--color-background-subtle)'
@@ -395,86 +395,6 @@ export default function Home() {
                 Get Started
               </Button>
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Temporary Design System Preview - To be removed later */}
-      <section className="w-full py-16 border-t" style={{ borderColor: 'var(--color-border)' }}>
-        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
-          <div className="text-center mb-12">
-            <h2 className="mb-4">Design System Preview</h2>
-            <p style={{ color: 'var(--color-secondary)' }}>
-              Temporary section for development reference
-            </p>
-            <Link href="/components-preview" className="inline-block mt-4">
-              <Button variant="secondary">
-                View All Components
-              </Button>
-            </Link>
-          </div>
-
-          {/* Colors */}
-          <div className="mb-8">
-            <h3 className="mb-4">Colors</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div>
-                <div className="w-full h-20 rounded-lg mb-2" style={{ backgroundColor: 'var(--color-primary)' }}></div>
-                <p className="text-sm">Primary</p>
-              </div>
-              <div>
-                <div className="w-full h-20 rounded-lg mb-2" style={{ backgroundColor: 'var(--color-secondary)' }}></div>
-                <p className="text-sm">Secondary</p>
-              </div>
-              <div>
-                <div className="w-full h-20 rounded-lg mb-2" style={{ backgroundColor: 'var(--color-accent)' }}></div>
-                <p className="text-sm">Accent</p>
-              </div>
-              <div>
-                <div className="w-full h-20 rounded-lg mb-2" style={{ backgroundColor: 'var(--color-highlight)' }}></div>
-                <p className="text-sm">Highlight</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Typography */}
-          <div className="mb-8">
-            <h3 className="mb-4">Typography</h3>
-            <div className="space-y-2">
-              <h1>Heading 1</h1>
-              <h2>Heading 2</h2>
-              <h3>Heading 3</h3>
-              <h4>Heading 4</h4>
-              <p className="text-base">Body text with comfortable line height for readability.</p>
-              <p className="text-sm">Small text for secondary information.</p>
-            </div>
-          </div>
-
-          {/* Spacing */}
-          <div className="mb-8">
-            <h3 className="mb-4">Spacing System (8px grid)</h3>
-            <div className="space-y-2">
-              <div className="flex items-center gap-4">
-                <div className="w-1 h-8" style={{ backgroundColor: 'var(--color-accent)' }}></div>
-                <span className="text-sm">xs: 4px</span>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="w-2 h-8" style={{ backgroundColor: 'var(--color-accent)' }}></div>
-                <span className="text-sm">sm: 8px</span>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="w-4 h-8" style={{ backgroundColor: 'var(--color-accent)' }}></div>
-                <span className="text-sm">md: 16px</span>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="w-6 h-8" style={{ backgroundColor: 'var(--color-accent)' }}></div>
-                <span className="text-sm">lg: 24px</span>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="w-8 h-8" style={{ backgroundColor: 'var(--color-accent)' }}></div>
-                <span className="text-sm">xl: 32px</span>
-              </div>
-            </div>
           </div>
         </div>
       </section>
