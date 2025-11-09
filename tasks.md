@@ -119,18 +119,18 @@ Set up the component folder structure and create reusable base components (Butto
 Build the shared layout components that will be used across all pages.
 
 **Acceptance Criteria:**
-- [ ] Header/Navigation component created:
+- [x] Header/Navigation component created:
   - Sticky navigation
   - Links: Home, About Us, Contact
   - Responsive (hamburger menu on mobile)
   - Follows design spec (§7.5.4)
-- [ ] Footer component created:
+- [x] Footer component created:
   - Navigation links
   - Contact email: chunkiet@jiuve.com
   - Copyright notice: © 2025 Jiuve. All rights reserved.
-- [ ] Mobile navigation fully functional
-- [ ] Smooth transitions and animations
-- [ ] Minimum 44px touch targets on mobile
+- [x] Mobile navigation fully functional
+- [x] Smooth transitions and animations
+- [x] Minimum 44px touch targets on mobile
 
 **Reference:** ProductRequirements.md §5.1.6, §7.5.4
 
