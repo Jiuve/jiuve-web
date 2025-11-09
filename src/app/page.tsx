@@ -1,3 +1,6 @@
+import Link from 'next/link';
+import { Button } from '@/components/ui';
+
 export default function Home() {
   return (
     <main className="min-h-screen p-8 md:p-16">
@@ -10,15 +13,16 @@ export default function Home() {
           <p className="text-xl md:text-2xl mb-6" style={{ color: 'var(--color-secondary)' }}>
             Custom AI Solutions That Work
           </p>
-          <button
-            className="px-8 py-3 rounded-md font-semibold text-white transition-all duration-200 hover:scale-105"
-            style={{
-              backgroundColor: 'var(--color-accent)',
-              transition: 'var(--transition-fast)'
-            }}
-          >
-            Get Started
-          </button>
+          <div className="flex gap-4">
+            <Button variant="primary">
+              Get Started
+            </Button>
+            <Link href="/components-preview">
+              <Button variant="secondary">
+                View Components
+              </Button>
+            </Link>
+          </div>
         </section>
 
         {/* Design System Preview */}

@@ -98,13 +98,13 @@ Create the foundational design system including colors, typography, and spacing 
 Set up the component folder structure and create reusable base components (Button, Card, Input, etc.).
 
 **Acceptance Criteria:**
-- [ ] Component folder structure created
-- [ ] Button component with Primary and Secondary variants (§7.5.1)
-- [ ] Card component with hover effects (§7.5.2)
-- [ ] Input/Textarea components with validation states (§7.5.3)
-- [ ] All components are TypeScript-typed
-- [ ] Components follow design specifications
-- [ ] Storybook or component preview set up (optional but recommended)
+- [x] Component folder structure created
+- [x] Button component with Primary and Secondary variants (§7.5.1)
+- [x] Card component with hover effects (§7.5.2)
+- [x] Input/Textarea components with validation states (§7.5.3)
+- [x] All components are TypeScript-typed
+- [x] Components follow design specifications
+- [x] Storybook or component preview set up (optional but recommended)
 
 **Reference:** ProductRequirements.md §7.5
 
