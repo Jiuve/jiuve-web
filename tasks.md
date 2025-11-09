@@ -145,12 +145,12 @@ Build the shared layout components that will be used across all pages.
 Configure SEO metadata, sitemap, and robots.txt.
 
 **Acceptance Criteria:**
-- [ ] Meta tags configured for all pages (see §6.5)
-- [ ] Open Graph tags added
-- [ ] Semantic HTML5 structure
-- [ ] XML sitemap generated
-- [ ] robots.txt created
-- [ ] Proper heading hierarchy enforced
+- [x] Meta tags configured for all pages (see §6.5)
+- [x] Open Graph tags added
+- [x] Semantic HTML5 structure
+- [x] XML sitemap generated
+- [x] robots.txt created
+- [x] Proper heading hierarchy enforced
 
 **Reference:** ProductRequirements.md §6.5
 
