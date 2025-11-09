@@ -6,16 +6,8 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  theme: {
-    extend: {
-      colors: {
-        primary: "#0F172A",
-        secondary: "#1E293B",
-        accent: "#06B6D4",
-        highlight: "#8B5CF6",
-      },
-    },
-  },
+  // Tailwind CSS v4 uses CSS-based configuration via @theme
+  // Most design tokens are defined in globals.css
   plugins: [],
 };
 export default config;
