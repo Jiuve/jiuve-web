@@ -32,6 +32,7 @@ export const Input: React.FC<InputProps> = ({
   };
 
   const inputStyle = {
+    width: '100%',
     color: 'var(--color-primary)',
     transition: 'var(--transition-fast)'
   };

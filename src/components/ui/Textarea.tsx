@@ -32,6 +32,7 @@ export const Textarea: React.FC<TextareaProps> = ({
   };
 
   const textareaStyle = {
+    width: '100%',
     color: 'var(--color-primary)',
     transition: 'var(--transition-fast)',
     minHeight: '120px'
