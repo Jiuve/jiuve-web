@@ -3,31 +3,61 @@ import { Button } from '@/components/ui';
 
 export default function Home() {
   return (
-    <main className="min-h-screen p-8 md:p-16">
-      <div className="max-w-7xl mx-auto">
-        {/* Hero Section */}
-        <section className="mb-16">
-          <h1 className="mb-4">
-            Welcome to Jiuve
-          </h1>
-          <p className="text-xl md:text-2xl mb-6" style={{ color: 'var(--color-secondary)' }}>
+    <div>
+      {/* Hero Section */}
+      <section className="w-full py-16 md:py-24 lg:py-32">
+        <div className="max-w-5xl mx-auto px-6 md:px-12 lg:px-16 text-center">
+          {/* Logo */}
+          <div className="mb-8">
+            <h2
+              className="text-3xl md:text-4xl font-bold tracking-tight"
+              style={{ color: 'var(--color-primary)' }}
+            >
+              Jiuve
+            </h2>
+          </div>
+
+          {/* Headline */}
+          <h1 className="mb-6">
             Custom AI Solutions That Work
+          </h1>
+
+          {/* Subheadline */}
+          <p
+            className="text-lg md:text-xl lg:text-2xl mb-10 max-w-3xl mx-auto"
+            style={{
+              color: 'var(--color-secondary)',
+              lineHeight: 'var(--line-height-loose)'
+            }}
+          >
+            We combine strategic thinking with hands-on development to build AI solutions tailored to your business—from concept to deployment.
           </p>
-          <div className="flex gap-4">
-            <Button variant="primary">
-              Get Started
-            </Button>
-            <Link href="/components-preview">
-              <Button variant="secondary">
-                View Components
+
+          {/* CTA Button */}
+          <div className="flex justify-center">
+            <Link href="/contact">
+              <Button variant="primary" className="text-lg px-10 py-4">
+                Get Started
               </Button>
             </Link>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Design System Preview */}
-        <section className="mb-16">
-          <h2 className="mb-4">Design System Preview</h2>
+      {/* Temporary Design System Preview - To be removed later */}
+      <section className="w-full py-16 border-t" style={{ borderColor: 'var(--color-border)' }}>
+        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+          <div className="text-center mb-12">
+            <h2 className="mb-4">Design System Preview</h2>
+            <p style={{ color: 'var(--color-secondary)' }}>
+              Temporary section for development reference
+            </p>
+            <Link href="/components-preview" className="inline-block mt-4">
+              <Button variant="secondary">
+                View All Components
+              </Button>
+            </Link>
+          </div>
 
           {/* Colors */}
           <div className="mb-8">
@@ -91,8 +121,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
-      </div>
-    </main>
+        </div>
+      </section>
+    </div>
   );
 }
