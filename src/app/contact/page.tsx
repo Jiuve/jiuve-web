@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, FormEvent, ChangeEvent, FocusEvent } from 'react';
+import emailjs from '@emailjs/browser';
 import { Input, Textarea, Button } from '@/components/ui';
 
 interface FormData {
@@ -105,8 +106,19 @@ export default function ContactPage() {
     }
   };
 
+  // Map service values to human-readable names
+  const getServiceName = (value: string): string => {
+    const serviceMap: { [key: string]: string } = {
+      'logistics': 'Logistics Management AI',
+      'agents': 'AI Agent Integration',
+      'analytics': 'Analytics Solutions with AI',
+      'other': 'Other'
+    };
+    return value ? serviceMap[value] || value : 'Not specified';
+  };
+
   // Handle form submission
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     // Validate all fields
@@ -133,15 +145,57 @@ export default function ContactPage() {
       return;
     }
 
-    // TODO: Task 3.3 - Send email
+    // Send email via EmailJS
     setIsSubmitting(true);
-    console.log('Form submitted:', formData);
 
-    // Simulate submission (will be replaced with actual email service in Task 3.3)
-    setTimeout(() => {
+    try {
+      // Prepare template parameters
+      const templateParams = {
+        from_email: formData.email,
+        from_phone: formData.phone,
+        service_interest: getServiceName(formData.service),
+        message: formData.message,
+        timestamp: new Date().toLocaleString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit',
+          timeZoneName: 'short'
+        })
+      };
+
+      // Send email using EmailJS
+      const response = await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        templateParams,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      );
+
+      console.log('Email sent successfully:', response);
+
+      // TODO: Task 3.4 - Show success message
+      alert('Thank you! Your message has been sent successfully. We\'ll get back to you within 1-2 business days.');
+
+      // Clear form on success
+      setFormData({
+        email: '',
+        phone: '',
+        service: '',
+        message: '',
+      });
+      setTouched({});
+      setErrors({});
+
+    } catch (error) {
+      console.error('Failed to send email:', error);
+
+      // TODO: Task 3.4 - Show error message
+      alert('Sorry, something went wrong. Please try again or email us directly at chunkiet@jiuve.com');
+    } finally {
       setIsSubmitting(false);
-      alert('Form submitted! (Email integration coming in Task 3.3)');
-    }, 1000);
+    }
   };
   return (
     <main className="min-h-screen py-16 md:py-24">
