@@ -1,134 +1,81 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About Jiuve - Powering the AI Era',
-  description: "Learn about Jiuve's mission to power the new AI era through custom and innovative solutions.",
+  title: 'About Jiuve - Making Enterprise AI Accessible',
+  description: "Discover Jiuve's mission to make AI work for mid-sized businesses. We deliver practical, business-focused solutions from ideation to deployment.",
   openGraph: {
-    title: 'About Jiuve - Powering the AI Era',
-    description: "Learn about Jiuve's mission to power the new AI era through custom and innovative solutions.",
+    title: 'About Jiuve - Making Enterprise AI Accessible',
+    description: "Discover Jiuve's mission to make AI work for mid-sized businesses. We deliver practical, business-focused solutions from ideation to deployment.",
     url: 'https://jiuve.com/about',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About Jiuve - Powering the AI Era',
-    description: "Learn about Jiuve's mission to power the new AI era through custom and innovative solutions.",
+    title: 'About Jiuve - Making Enterprise AI Accessible',
+    description: "Discover Jiuve's mission to make AI work for mid-sized businesses. We deliver practical, business-focused solutions from ideation to deployment.",
   },
 };
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen py-16 md:py-24">
-      <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
-        {/* Page Header */}
-        <div className="text-center mb-16">
-          <h1 className="mb-4">About Jiuve</h1>
-          <p
-            className="text-lg md:text-xl max-w-3xl mx-auto"
-            style={{ color: 'var(--color-secondary)' }}
-          >
-            Building custom AI solutions that transform businesses from concept to deployment
-          </p>
+    <main className="min-h-screen">
+      {/* Hero Section */}
+      <section className="py-16 md:py-24">
+        <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="mb-6">Transforming Business Challenges into AI Opportunities</h1>
+            <p
+              className="text-lg md:text-xl"
+              style={{ color: 'var(--color-secondary)' }}
+            >
+              We deliver practical, business-focused AI solutions that drive real results—from strategic ideation to full-scale deployment and beyond.
+            </p>
+          </div>
         </div>
+      </section>
 
-        {/* Founder Information Section */}
-        <section className="mb-24">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
-            {/* Founder Photo */}
-            <div className="lg:col-span-1">
-              <div
-                className="relative aspect-square w-full max-w-md mx-auto rounded-lg overflow-hidden"
-                style={{
-                  backgroundColor: 'var(--color-background-subtle)',
-                  borderColor: 'var(--color-border)',
-                }}
+      {/* Our Mission Section */}
+      <section className="py-16 md:py-24" style={{ backgroundColor: 'var(--color-background-subtle)' }}>
+        <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="mb-6">Our Mission</h2>
+              <p
+                className="text-xl md:text-2xl font-semibold"
+                style={{ color: 'var(--color-accent)' }}
               >
-                {/* Placeholder for founder photo */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <svg
-                    width="120"
-                    height="120"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="var(--color-border-light)"
-                    strokeWidth="1"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="12" cy="7" r="4"></circle>
-                  </svg>
-                </div>
-              </div>
+                Making Enterprise AI Accessible and Actionable
+              </p>
             </div>
 
-            {/* Founder Bio */}
-            <div className="lg:col-span-2">
-              <div className="mb-6">
-                <h2 className="mb-2">Meet the Founder</h2>
-                <h3 style={{ color: 'var(--color-accent)' }}>[Founder Name]</h3>
-              </div>
-
-              <div className="space-y-4">
-                <p className="text-base md:text-lg" style={{ color: 'var(--color-primary)' }}>
-                  [Founder bio paragraph 1: Background and experience. For example, "With over 10 years of experience in software engineering and AI development, [Founder Name] has led numerous successful projects transforming how businesses leverage artificial intelligence."]
-                </p>
-
-                <p className="text-base md:text-lg" style={{ color: 'var(--color-primary)' }}>
-                  [Founder bio paragraph 2: Previous work and achievements. For example, "Before founding Jiuve, [Name] worked with Fortune 500 companies implementing machine learning solutions that drove measurable business impact. Their work has spanned logistics optimization, predictive analytics, and intelligent automation systems."]
-                </p>
-
-                <p className="text-base md:text-lg" style={{ color: 'var(--color-primary)' }}>
-                  [Founder bio paragraph 3: Vision and why Jiuve exists. For example, "The vision for Jiuve emerged from seeing a gap between AI consulting advice and actual implementation. Too many businesses receive strategic recommendations without the technical execution to bring them to life. Jiuve bridges that gap by providing end-to-end AI solutions from ideation to deployment."]
-                </p>
-              </div>
+            <div className="space-y-6 text-lg" style={{ color: 'var(--color-primary)' }}>
+              <p>
+                We believe AI should solve real business problems, not create new ones. Our mission is to bridge the gap between AI potential and practical implementation, delivering solutions that drive measurable results from day one.
+              </p>
+              <p>
+                At Jiuve, we partner with mid-sized businesses and corporations to transform AI aspirations into reality—combining strategic thinking with hands-on development to create solutions that actually work.
+              </p>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Founder Achievements Section */}
-        <section className="mb-24">
+      {/* Our Values Section */}
+      <section className="py-16 md:py-24">
+        <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
           <div className="text-center mb-12">
-            <h2 className="mb-4">Key Achievements</h2>
+            <h2 className="mb-4">Our Values</h2>
             <p
               className="text-lg md:text-xl max-w-2xl mx-auto"
               style={{ color: 'var(--color-secondary)' }}
             >
-              Proven track record of delivering impactful AI solutions
+              Four principles that guide everything we do
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Achievement 1 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Value 1: Practical Over Theoretical */}
             <div
-              className="p-8 rounded-lg border transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
-              style={{
-                borderColor: 'var(--color-border)',
-                backgroundColor: 'var(--color-background)',
-              }}
-            >
-              <div className="mb-6" aria-hidden="true">
-                <svg
-                  width="48"
-                  height="48"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="var(--color-accent)"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                </svg>
-              </div>
-              <h4 className="mb-3">[Achievement Title 1]</h4>
-              <p style={{ color: 'var(--color-secondary)' }}>
-                [Description of a major accomplishment or credential. For example, "Led the development of AI-powered logistics system that reduced operational costs by 30% for a Fortune 500 company."]
-              </p>
-            </div>
-
-            {/* Achievement 2 */}
-            <div
-              className="p-8 rounded-lg border transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              className="p-8 rounded-lg border transition-all duration-300 hover:shadow-lg"
               style={{
                 borderColor: 'var(--color-border)',
                 backgroundColor: 'var(--color-background)',
@@ -149,15 +96,16 @@ export default function AboutPage() {
                   <polyline points="22 4 12 14.01 9 11.01"></polyline>
                 </svg>
               </div>
-              <h4 className="mb-3">[Achievement Title 2]</h4>
-              <p style={{ color: 'var(--color-secondary)' }}>
-                [Description of relevant experience or notable project. For example, "Successfully deployed 15+ machine learning models in production environments across various industries."]
-              </p>
+              <h3 className="mb-3 text-xl font-semibold">Practical Over Theoretical</h3>
+              <div className="space-y-2 text-sm" style={{ color: 'var(--color-secondary)' }}>
+                <p>We focus on solutions that work in the real world, not just in research papers</p>
+                <p>Every implementation is measured by business impact, not technical complexity</p>
+              </div>
             </div>
 
-            {/* Achievement 3 */}
+            {/* Value 2: Partnership Over Consulting */}
             <div
-              className="p-8 rounded-lg border transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              className="p-8 rounded-lg border transition-all duration-300 hover:shadow-lg"
               style={{
                 borderColor: 'var(--color-border)',
                 backgroundColor: 'var(--color-background)',
@@ -180,15 +128,16 @@ export default function AboutPage() {
                   <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                 </svg>
               </div>
-              <h4 className="mb-3">[Achievement Title 3]</h4>
-              <p style={{ color: 'var(--color-secondary)' }}>
-                [Description of credentials or expertise. For example, "Built and led engineering teams that delivered high-impact AI solutions for clients across North America and Europe."]
-              </p>
+              <h3 className="mb-3 text-xl font-semibold">Partnership Over Consulting</h3>
+              <div className="space-y-2 text-sm" style={{ color: 'var(--color-secondary)' }}>
+                <p>We don't just advise—we build, deploy, and support</p>
+                <p>Your success is our success; we're invested in long-term outcomes</p>
+              </div>
             </div>
 
-            {/* Achievement 4 */}
+            {/* Value 3: Domain Expertise Matters */}
             <div
-              className="p-8 rounded-lg border transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              className="p-8 rounded-lg border transition-all duration-300 hover:shadow-lg"
               style={{
                 borderColor: 'var(--color-border)',
                 backgroundColor: 'var(--color-background)',
@@ -205,19 +154,20 @@ export default function AboutPage() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 >
-                  <polyline points="16 18 22 12 16 6"></polyline>
-                  <polyline points="8 6 2 12 8 18"></polyline>
+                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                  <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
                 </svg>
               </div>
-              <h4 className="mb-3">[Achievement Title 4]</h4>
-              <p style={{ color: 'var(--color-secondary)' }}>
-                [Description of technical expertise or innovation. For example, "Architected scalable AI infrastructure handling millions of requests daily with 99.9% uptime."]
-              </p>
+              <h3 className="mb-3 text-xl font-semibold">Domain Expertise Matters</h3>
+              <div className="space-y-2 text-sm" style={{ color: 'var(--color-secondary)' }}>
+                <p>We understand your industry before we propose solutions</p>
+                <p>AI is the tool, not the answer</p>
+              </div>
             </div>
 
-            {/* Achievement 5 */}
+            {/* Value 4: Sustainable Innovation */}
             <div
-              className="p-8 rounded-lg border transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              className="p-8 rounded-lg border transition-all duration-300 hover:shadow-lg"
               style={{
                 borderColor: 'var(--color-border)',
                 backgroundColor: 'var(--color-background)',
@@ -238,181 +188,281 @@ export default function AboutPage() {
                   <polyline points="12 6 12 12 16 14"></polyline>
                 </svg>
               </div>
-              <h4 className="mb-3">[Achievement Title 5]</h4>
-              <p style={{ color: 'var(--color-secondary)' }}>
-                [Description of industry recognition or impact. For example, "Pioneered innovative approaches to AI implementation that have been adopted as best practices in the industry."]
-              </p>
+              <h3 className="mb-3 text-xl font-semibold">Sustainable Innovation</h3>
+              <div className="space-y-2 text-sm" style={{ color: 'var(--color-secondary)' }}>
+                <p>Solutions designed for longevity and scalability</p>
+                <p>Training and knowledge transfer are built into every project</p>
+              </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Company Mission Section */}
-        <section className="mb-24">
+      {/* What Sets Us Apart Section */}
+      <section className="py-16 md:py-24" style={{ backgroundColor: 'var(--color-background-subtle)' }}>
+        <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
+          <div className="text-center mb-12">
+            <h2 className="mb-4">What Sets Us Apart</h2>
+            <p
+              className="text-lg md:text-xl max-w-2xl mx-auto"
+              style={{ color: 'var(--color-secondary)' }}
+            >
+              More than consultants, more than developers—we're your complete AI partner
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Differentiator 1: Full-Stack AI Implementation */}
+            <div
+              className="p-8 rounded-lg border"
+              style={{
+                borderColor: 'var(--color-border)',
+                backgroundColor: 'var(--color-background)',
+              }}
+            >
+              <div className="mb-6" aria-hidden="true">
+                <svg
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="var(--color-highlight)"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h3 className="mb-4 text-xl font-semibold">Full-Stack AI Implementation</h3>
+              <ul className="space-y-3 text-sm" style={{ color: 'var(--color-secondary)' }}>
+                <li className="flex items-start">
+                  <span className="mr-2" style={{ color: 'var(--color-accent)' }}>•</span>
+                  <span>From ideation workshops to production deployment</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2" style={{ color: 'var(--color-accent)' }}>•</span>
+                  <span>Hardware integration, software development, and ongoing support</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2" style={{ color: 'var(--color-accent)' }}>•</span>
+                  <span>One partner for your entire AI journey</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Differentiator 2: Business-First Approach */}
+            <div
+              className="p-8 rounded-lg border"
+              style={{
+                borderColor: 'var(--color-border)',
+                backgroundColor: 'var(--color-background)',
+              }}
+            >
+              <div className="mb-6" aria-hidden="true">
+                <svg
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="var(--color-highlight)"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <line x1="12" y1="1" x2="12" y2="23"></line>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </div>
+              <h3 className="mb-4 text-xl font-semibold">Business-First Approach</h3>
+              <ul className="space-y-3 text-sm" style={{ color: 'var(--color-secondary)' }}>
+                <li className="flex items-start">
+                  <span className="mr-2" style={{ color: 'var(--color-accent)' }}>•</span>
+                  <span>Start with ROI goals, not AI capabilities</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2" style={{ color: 'var(--color-accent)' }}>•</span>
+                  <span>Solutions tailored to your industry, scale, and constraints</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2" style={{ color: 'var(--color-accent)' }}>•</span>
+                  <span>Measurable outcomes defined before development begins</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Differentiator 3: Mid-Market Specialists */}
+            <div
+              className="p-8 rounded-lg border"
+              style={{
+                borderColor: 'var(--color-border)',
+                backgroundColor: 'var(--color-background)',
+              }}
+            >
+              <div className="mb-6" aria-hidden="true">
+                <svg
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="var(--color-highlight)"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <h3 className="mb-4 text-xl font-semibold">Mid-Market Specialists</h3>
+              <ul className="space-y-3 text-sm" style={{ color: 'var(--color-secondary)' }}>
+                <li className="flex items-start">
+                  <span className="mr-2" style={{ color: 'var(--color-accent)' }}>•</span>
+                  <span>Purpose-built for mid-sized businesses and corporations</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2" style={{ color: 'var(--color-accent)' }}>•</span>
+                  <span>Enterprise-grade solutions without enterprise complexity</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2" style={{ color: 'var(--color-accent)' }}>•</span>
+                  <span>Pricing and timelines designed for your reality</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Commitment Section */}
+      <section className="py-16 md:py-24">
+        <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8">
-              <h2 className="mb-4">Our Mission</h2>
-              <p
-                className="text-xl md:text-2xl font-semibold mb-6"
-                style={{ color: 'var(--color-accent)' }}
-              >
-                Help power the new AI era through custom and innovative solutions
-              </p>
+              <h2 className="mb-6">Our Commitment</h2>
             </div>
 
             <div
               className="p-8 md:p-12 rounded-lg border"
               style={{
                 borderColor: 'var(--color-border)',
-                backgroundColor: 'var(--color-background-subtle)',
+                backgroundColor: 'var(--color-background)',
               }}
             >
               <p className="text-lg mb-6" style={{ color: 'var(--color-primary)' }}>
-                Jiuve is a software engineering firm that differentiates itself from traditional consulting firms by providing
-                full-service AI solutions from brainstorming to deployment. We don't just consult—we build.
+                We're committed to responsible AI deployment that:
               </p>
 
-              <p className="text-lg" style={{ color: 'var(--color-primary)' }}>
-                Our approach combines strategic ideation and brainstorming, hands-on software development,
-                hardware integration capabilities, and end-to-end implementation and deployment. We partner with
-                mid-sized businesses and corporations to turn AI aspirations into reality.
-              </p>
+              <ul className="space-y-4">
+                <li className="flex items-start text-base md:text-lg">
+                  <svg
+                    className="mr-3 mt-1 flex-shrink-0"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="var(--color-accent)"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span style={{ color: 'var(--color-primary)' }}>
+                    Augments human capabilities rather than replacing them
+                  </span>
+                </li>
+                <li className="flex items-start text-base md:text-lg">
+                  <svg
+                    className="mr-3 mt-1 flex-shrink-0"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="var(--color-accent)"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span style={{ color: 'var(--color-primary)' }}>
+                    Respects data privacy and security
+                  </span>
+                </li>
+                <li className="flex items-start text-base md:text-lg">
+                  <svg
+                    className="mr-3 mt-1 flex-shrink-0"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="var(--color-accent)"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span style={{ color: 'var(--color-primary)' }}>
+                    Delivers transparent, explainable results
+                  </span>
+                </li>
+                <li className="flex items-start text-base md:text-lg">
+                  <svg
+                    className="mr-3 mt-1 flex-shrink-0"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="var(--color-accent)"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span style={{ color: 'var(--color-primary)' }}>
+                    Creates measurable business value
+                  </span>
+                </li>
+              </ul>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Company Values Section */}
-        <section className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="mb-4">Our Values</h2>
-            <p
-              className="text-lg md:text-xl max-w-2xl mx-auto"
-              style={{ color: 'var(--color-secondary)' }}
+      {/* Why We Exist Section */}
+      <section className="py-16 md:py-24" style={{ backgroundColor: 'var(--color-background-subtle)' }}>
+        <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="mb-6">Why We Exist</h2>
+            </div>
+
+            <div
+              className="p-8 md:p-12 rounded-lg border text-center"
+              style={{
+                borderColor: 'var(--color-accent)',
+                backgroundColor: 'var(--color-background)',
+              }}
             >
-              Built on principles that deliver exceptional results
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
-            {/* Value 1: Innovative */}
-            <div className="text-center">
-              <div className="mb-4 flex justify-center" aria-hidden="true">
-                <svg
-                  width="40"
-                  height="40"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="var(--color-highlight)"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <line x1="12" y1="8" x2="12" y2="16"></line>
-                  <line x1="8" y1="12" x2="16" y2="12"></line>
-                </svg>
-              </div>
-              <h4 className="mb-2">Innovative</h4>
-              <p className="text-sm" style={{ color: 'var(--color-secondary)' }}>
-                Cutting-edge solutions tailored to your needs
-              </p>
-            </div>
-
-            {/* Value 2: Quality-Focused */}
-            <div className="text-center">
-              <div className="mb-4 flex justify-center" aria-hidden="true">
-                <svg
-                  width="40"
-                  height="40"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="var(--color-highlight)"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                </svg>
-              </div>
-              <h4 className="mb-2">Quality-Focused</h4>
-              <p className="text-sm" style={{ color: 'var(--color-secondary)' }}>
-                Excellence in every line of code
-              </p>
-            </div>
-
-            {/* Value 3: Minimalistic */}
-            <div className="text-center">
-              <div className="mb-4 flex justify-center" aria-hidden="true">
-                <svg
-                  width="40"
-                  height="40"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="var(--color-highlight)"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <line x1="8" y1="6" x2="21" y2="6"></line>
-                  <line x1="8" y1="12" x2="21" y2="12"></line>
-                  <line x1="8" y1="18" x2="21" y2="18"></line>
-                  <line x1="3" y1="6" x2="3.01" y2="6"></line>
-                  <line x1="3" y1="12" x2="3.01" y2="12"></line>
-                  <line x1="3" y1="18" x2="3.01" y2="18"></line>
-                </svg>
-              </div>
-              <h4 className="mb-2">Minimalistic</h4>
-              <p className="text-sm" style={{ color: 'var(--color-secondary)' }}>
-                Clean, efficient designs that work
-              </p>
-            </div>
-
-            {/* Value 4: Efficient */}
-            <div className="text-center">
-              <div className="mb-4 flex justify-center" aria-hidden="true">
-                <svg
-                  width="40"
-                  height="40"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="var(--color-highlight)"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <polyline points="13 17 18 12 13 7"></polyline>
-                  <polyline points="6 17 11 12 6 7"></polyline>
-                </svg>
-              </div>
-              <h4 className="mb-2">Efficient</h4>
-              <p className="text-sm" style={{ color: 'var(--color-secondary)' }}>
-                Fast delivery without compromising standards
-              </p>
-            </div>
-
-            {/* Value 5: Responsible */}
-            <div className="text-center">
-              <div className="mb-4 flex justify-center" aria-hidden="true">
-                <svg
-                  width="40"
-                  height="40"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="var(--color-highlight)"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                </svg>
-              </div>
-              <h4 className="mb-2">Responsible</h4>
-              <p className="text-sm" style={{ color: 'var(--color-secondary)' }}>
-                Ethical AI that serves your business goals
+              <p className="text-lg md:text-xl leading-relaxed" style={{ color: 'var(--color-primary)' }}>
+                We exist to make AI work for mid-sized businesses. We combine deep technical expertise with hands-on implementation,
+                delivering complete AI solutions from ideation through deployment. Our approach is simple: understand your business,
+                build what actually works, and ensure you can sustain it.
               </p>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
   );
 }
