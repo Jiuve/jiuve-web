@@ -85,6 +85,167 @@ export default function AboutPage() {
           </div>
         </section>
 
+        {/* Founder Achievements Section */}
+        <section className="mb-24">
+          <div className="text-center mb-12">
+            <h2 className="mb-4">Key Achievements</h2>
+            <p
+              className="text-lg md:text-xl max-w-2xl mx-auto"
+              style={{ color: 'var(--color-secondary)' }}
+            >
+              Proven track record of delivering impactful AI solutions
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Achievement 1 */}
+            <div
+              className="p-8 rounded-lg border transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              style={{
+                borderColor: 'var(--color-border)',
+                backgroundColor: 'var(--color-background)',
+              }}
+            >
+              <div className="mb-6" aria-hidden="true">
+                <svg
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="var(--color-accent)"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                </svg>
+              </div>
+              <h4 className="mb-3">[Achievement Title 1]</h4>
+              <p style={{ color: 'var(--color-secondary)' }}>
+                [Description of a major accomplishment or credential. For example, "Led the development of AI-powered logistics system that reduced operational costs by 30% for a Fortune 500 company."]
+              </p>
+            </div>
+
+            {/* Achievement 2 */}
+            <div
+              className="p-8 rounded-lg border transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              style={{
+                borderColor: 'var(--color-border)',
+                backgroundColor: 'var(--color-background)',
+              }}
+            >
+              <div className="mb-6" aria-hidden="true">
+                <svg
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="var(--color-accent)"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <h4 className="mb-3">[Achievement Title 2]</h4>
+              <p style={{ color: 'var(--color-secondary)' }}>
+                [Description of relevant experience or notable project. For example, "Successfully deployed 15+ machine learning models in production environments across various industries."]
+              </p>
+            </div>
+
+            {/* Achievement 3 */}
+            <div
+              className="p-8 rounded-lg border transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              style={{
+                borderColor: 'var(--color-border)',
+                backgroundColor: 'var(--color-background)',
+              }}
+            >
+              <div className="mb-6" aria-hidden="true">
+                <svg
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="var(--color-accent)"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <h4 className="mb-3">[Achievement Title 3]</h4>
+              <p style={{ color: 'var(--color-secondary)' }}>
+                [Description of credentials or expertise. For example, "Built and led engineering teams that delivered high-impact AI solutions for clients across North America and Europe."]
+              </p>
+            </div>
+
+            {/* Achievement 4 */}
+            <div
+              className="p-8 rounded-lg border transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              style={{
+                borderColor: 'var(--color-border)',
+                backgroundColor: 'var(--color-background)',
+              }}
+            >
+              <div className="mb-6" aria-hidden="true">
+                <svg
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="var(--color-accent)"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h4 className="mb-3">[Achievement Title 4]</h4>
+              <p style={{ color: 'var(--color-secondary)' }}>
+                [Description of technical expertise or innovation. For example, "Architected scalable AI infrastructure handling millions of requests daily with 99.9% uptime."]
+              </p>
+            </div>
+
+            {/* Achievement 5 */}
+            <div
+              className="p-8 rounded-lg border transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              style={{
+                borderColor: 'var(--color-border)',
+                backgroundColor: 'var(--color-background)',
+              }}
+            >
+              <div className="mb-6" aria-hidden="true">
+                <svg
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="var(--color-accent)"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <h4 className="mb-3">[Achievement Title 5]</h4>
+              <p style={{ color: 'var(--color-secondary)' }}>
+                [Description of industry recognition or impact. For example, "Pioneered innovative approaches to AI implementation that have been adopted as best practices in the industry."]
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Company Mission Section */}
         <section className="mb-24">
           <div className="max-w-4xl mx-auto">
