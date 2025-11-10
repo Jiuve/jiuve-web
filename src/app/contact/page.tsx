@@ -17,6 +17,8 @@ interface FormErrors {
   message?: string;
 }
 
+type SubmissionStatus = 'idle' | 'submitting' | 'success' | 'error';
+
 export default function ContactPage() {
   const [formData, setFormData] = useState<FormData>({
     email: '',
@@ -27,7 +29,8 @@ export default function ContactPage() {
 
   const [errors, setErrors] = useState<FormErrors>({});
   const [touched, setTouched] = useState<{ [key: string]: boolean }>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submissionStatus, setSubmissionStatus] = useState<SubmissionStatus>('idle');
+  const [errorMessage, setErrorMessage] = useState<string>('');
 
   // Validation functions
   const validateEmail = (email: string): string | undefined => {
@@ -117,6 +120,12 @@ export default function ContactPage() {
     return value ? serviceMap[value] || value : 'Not specified';
   };
 
+  // Retry submission after error
+  const handleRetry = () => {
+    setSubmissionStatus('idle');
+    setErrorMessage('');
+  };
+
   // Handle form submission
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -146,7 +155,8 @@ export default function ContactPage() {
     }
 
     // Send email via EmailJS
-    setIsSubmitting(true);
+    setSubmissionStatus('submitting');
+    setErrorMessage('');
 
     try {
       // Prepare template parameters
@@ -175,8 +185,8 @@ export default function ContactPage() {
 
       console.log('Email sent successfully:', response);
 
-      // TODO: Task 3.4 - Show success message
-      alert('Thank you! Your message has been sent successfully. We\'ll get back to you within 1-2 business days.');
+      // Show success state
+      setSubmissionStatus('success');
 
       // Clear form on success
       setFormData({
@@ -191,10 +201,9 @@ export default function ContactPage() {
     } catch (error) {
       console.error('Failed to send email:', error);
 
-      // TODO: Task 3.4 - Show error message
-      alert('Sorry, something went wrong. Please try again or email us directly at chunkiet@jiuve.com');
-    } finally {
-      setIsSubmitting(false);
+      // Show error state
+      setSubmissionStatus('error');
+      setErrorMessage('Sorry, something went wrong while sending your message. Please try again or email us directly.');
     }
   };
   return (
@@ -333,9 +342,9 @@ export default function ContactPage() {
                 type="submit"
                 variant="primary"
                 className="w-full md:w-auto md:px-12"
-                disabled={isSubmitting}
+                disabled={submissionStatus === 'submitting' || submissionStatus === 'success'}
               >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
+                {submissionStatus === 'submitting' ? 'Sending...' : 'Send Message'}
               </Button>
             </div>
 
@@ -344,6 +353,102 @@ export default function ContactPage() {
               We'll get back to you within 1-2 business days. Your information is kept confidential.
             </p>
           </form>
+
+          {/* Success Message */}
+          {submissionStatus === 'success' && (
+            <div
+              className="mt-6 p-6 rounded-lg border-2 animate-in fade-in slide-in-from-bottom-4 duration-500"
+              style={{
+                borderColor: 'var(--color-success)',
+                backgroundColor: '#F0FDF4'
+              }}
+            >
+              <div className="flex items-start gap-3">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="var(--color-success)"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="flex-shrink-0 mt-0.5"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <div className="flex-1">
+                  <h3 className="font-semibold mb-2" style={{ color: 'var(--color-success)' }}>
+                    Message Sent Successfully!
+                  </h3>
+                  <p className="text-sm mb-3" style={{ color: 'var(--color-primary)' }}>
+                    Thank you for reaching out! We've received your message and will get back to you within 1-2 business days.
+                  </p>
+                  <p className="text-sm" style={{ color: 'var(--color-secondary)' }}>
+                    Check your email for a confirmation. If you need immediate assistance, feel free to email us at <a href="mailto:chunkiet@jiuve.com" className="underline" style={{ color: 'var(--color-accent)' }}>chunkiet@jiuve.com</a>.
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Error Message */}
+          {submissionStatus === 'error' && (
+            <div
+              className="mt-6 p-6 rounded-lg border-2 animate-in fade-in slide-in-from-bottom-4 duration-500"
+              style={{
+                borderColor: 'var(--color-error)',
+                backgroundColor: '#FEF2F2'
+              }}
+            >
+              <div className="flex items-start gap-3">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="var(--color-error)"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="flex-shrink-0 mt-0.5"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="8" x2="12" y2="12"></line>
+                  <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+                <div className="flex-1">
+                  <h3 className="font-semibold mb-2" style={{ color: 'var(--color-error)' }}>
+                    Oops! Something Went Wrong
+                  </h3>
+                  <p className="text-sm mb-4" style={{ color: 'var(--color-primary)' }}>
+                    {errorMessage}
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <Button
+                      onClick={handleRetry}
+                      variant="secondary"
+                      className="text-sm"
+                    >
+                      Try Again
+                    </Button>
+                    <a
+                      href="mailto:chunkiet@jiuve.com"
+                      className="inline-flex items-center justify-center px-6 py-2 rounded-md border-2 font-semibold text-sm transition-colors"
+                      style={{
+                        borderColor: 'var(--color-error)',
+                        color: 'var(--color-error)',
+                        backgroundColor: 'transparent'
+                      }}
+                    >
+                      Email Us Directly
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Contact Information */}
