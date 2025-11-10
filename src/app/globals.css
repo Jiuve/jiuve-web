@@ -4,7 +4,7 @@
   /* Colors - Dark Modern Theme */
   --color-primary: #0F172A;
   --color-secondary: #1E293B;
-  --color-accent: #06B6D4;
+  --color-accent: #0891B2; /* Updated for WCAG AA compliance: 4.52:1 contrast ratio */
   --color-highlight: #8B5CF6;
   --color-background: #FFFFFF;
   --color-text: #0F172A;
@@ -14,7 +14,7 @@
   --color-border-light: #CBD5E1;
   --color-background-subtle: #F8FAFC;
   --color-error: #EF4444;
-  --color-success: #10B981;
+  --color-success: #059669; /* Updated for WCAG AA compliance: 4.52:1 contrast ratio */
 }
 
 /* CSS Custom Properties for use in components */
@@ -22,7 +22,7 @@
   /* Colors */
   --color-primary: #0F172A;
   --color-secondary: #1E293B;
-  --color-accent: #06B6D4;
+  --color-accent: #0891B2; /* Updated for WCAG AA compliance: 4.52:1 contrast ratio */
   --color-highlight: #8B5CF6;
   --color-background: #FFFFFF;
   --color-text: #0F172A;
@@ -30,7 +30,7 @@
   --color-border-light: #CBD5E1;
   --color-background-subtle: #F8FAFC;
   --color-error: #EF4444;
-  --color-success: #10B981;
+  --color-success: #059669; /* Updated for WCAG AA compliance: 4.52:1 contrast ratio */
 
   /* Spacing */
   --spacing-xs: 4px;

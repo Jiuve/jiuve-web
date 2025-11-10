@@ -357,6 +357,8 @@ export default function ContactPage() {
           {/* Success Message */}
           {submissionStatus === 'success' && (
             <div
+              role="status"
+              aria-live="polite"
               className="mt-6 p-6 rounded-lg border-2 animate-in fade-in slide-in-from-bottom-4 duration-500"
               style={{
                 borderColor: 'var(--color-success)',
@@ -396,6 +398,8 @@ export default function ContactPage() {
           {/* Error Message */}
           {submissionStatus === 'error' && (
             <div
+              role="alert"
+              aria-live="assertive"
               className="mt-6 p-6 rounded-lg border-2 animate-in fade-in slide-in-from-bottom-4 duration-500"
               style={{
                 borderColor: 'var(--color-error)',
