@@ -123,9 +123,13 @@ Jiuve Website
 │   └── Footer
 │
 └── About Us Page
-    ├── Founder Information
-    ├── Achievements
-    ├── Company Values
+    ├── Hero/Mission Statement
+    ├── Our Mission
+    ├── Our Values (4 core values)
+    ├── What Sets Us Apart
+    ├── Our Commitment
+    ├── Why We Exist
+    ├── Call-to-Action
     └── Footer
 ```
 
@@ -321,37 +325,60 @@ Submitted: [timestamp]
 
 #### 5.3.1 Content Structure
 
+**Page Focus:** Mission and values-focused approach, emphasizing company purpose rather than individual founders.
+
 **Required Sections:**
 
-1. **Founder Information**
-   - Founder name
-   - Background/bio
-   - Photo (if available)
+1. **Hero Section**
+   - Bold mission statement: "Transforming Business Challenges into AI Opportunities"
+   - Brief introductory text emphasizing practical, business-focused AI solutions
 
-2. **Founder Achievements**
-   - Key accomplishments
-   - Relevant experience
-   - Notable projects or credentials
+2. **Our Mission**
+   - Headline: "Making Enterprise AI Accessible and Actionable"
+   - Core message: "We believe AI should solve real business problems, not create new ones. Our mission is to bridge the gap between AI potential and practical implementation, delivering solutions that drive measurable results from day one."
 
-3. **Company Values and Approach**
-   - Same 5 values as Main Page:
-     - Innovative
-     - Quality-Focused
-     - Minimalistic
-     - Efficient
-     - Responsible
-   - Expanded descriptions if needed
+3. **Our Values** (4 Core Values)
+   - **Practical Over Theoretical**
+     - We focus on solutions that work in the real world, not just in research papers
+     - Every implementation is measured by business impact, not technical complexity
 
-4. **Company Mission/Goal**
-   - Statement: "Help power the new AI era through custom and innovative solutions"
-   - Vision for the future
-   - Why Jiuve exists
+   - **Partnership Over Consulting**
+     - We don't just advise—we build, deploy, and support
+     - Your success is our success; we're invested in long-term outcomes
+
+   - **Domain Expertise Matters**
+     - We understand your industry before we propose solutions
+     - AI is the tool, not the answer
+
+   - **Sustainable Innovation**
+     - Solutions designed for longevity and scalability
+     - Training and knowledge transfer are built into every project
+
+4. **What Sets Us Apart**
+   - **Full-Stack AI Implementation**: From ideation workshops to production deployment, hardware integration, software development, and ongoing support
+   - **Business-First Approach**: Start with ROI goals, not AI capabilities; solutions tailored to industry, scale, and constraints
+   - **Mid-Market Specialists**: Purpose-built for mid-sized businesses and corporations; enterprise-grade solutions without enterprise complexity
+
+5. **Our Commitment**
+   - Responsible AI deployment that:
+     - Augments human capabilities rather than replacing them
+     - Respects data privacy and security
+     - Delivers transparent, explainable results
+     - Creates measurable business value
+
+6. **Why We Exist**
+   - Statement: "We exist to make AI work for mid-sized businesses. We combine deep technical expertise with hands-on implementation, delivering complete AI solutions from ideation through deployment. Our approach is simple: understand your business, build what actually works, and ensure you can sustain it."
+
+7. **Call-to-Action**
+   - "Ready to explore what AI can do for your business?"
+   - Link to Contact page or consultation booking
 
 **Layout:**
-- Single column, scannable layout
-- Professional photography (if available)
-- Mix of text and visual elements
-- Authentic, personal tone while maintaining professionalism
+- Clean, scannable layout with clear section divisions
+- Mix of text and visual elements (icons for values, visual breaks between sections)
+- Professional and confident tone
+- Emphasis on practical value and business outcomes
+- Mobile-responsive design with consistent spacing
 
 ---
 
@@ -424,8 +451,8 @@ Submitted: [timestamp]
 <meta name="description" content="Get in touch with Jiuve to discuss your AI solution needs. From logistics to analytics, we build custom solutions.">
 
 <!-- About Us Page -->
-<title>About Jiuve - Powering the AI Era</title>
-<meta name="description" content="Learn about Jiuve's mission to power the new AI era through custom and innovative solutions.">
+<title>About Jiuve - Making Enterprise AI Accessible</title>
+<meta name="description" content="Discover Jiuve's mission to make AI work for mid-sized businesses. We deliver practical, business-focused solutions from ideation to deployment.">
 ```
 
 ### 6.6 Accessibility Requirements

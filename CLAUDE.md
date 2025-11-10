@@ -302,10 +302,13 @@ Inspired by modern SaaS companies:
    - Form submission to: chunkiet@jiuve.com
 
 3. **About Us Page** - `/about`
-   - Founder information
-   - Achievements
-   - Company values
-   - Mission statement
+   - Hero/Mission statement
+   - Our Mission (detailed)
+   - Our Values (4 core values)
+   - What Sets Us Apart
+   - Our Commitment
+   - Why We Exist
+   - Call-to-Action
 
 ## Current Status
 

@@ -423,127 +423,125 @@ Thoroughly test contact form functionality and email delivery.
 
 ## Phase 4: About Us Page Development
 
-### Task 4.1: Build Founder Information Section
+### Task 4.1: Build Hero and Mission Sections
 **Dependencies:** Task 1.5
 **Priority:** High
 **Estimated Effort:** 2-3 hours
 
 **Description:**
-Create the founder information section with bio and photo.
+Create the hero section with bold mission statement and the detailed "Our Mission" section.
 
 **Acceptance Criteria:**
-- [x] Section layout created
-- [x] Founder name displayed
-- [x] Background/bio section
-- [x] Photo placement (placeholder if not available)
-- [x] Professional, clean layout
-- [x] Responsive design
-- [x] Proper typography and spacing
+- [ ] Hero section with headline: "Transforming Business Challenges into AI Opportunities"
+- [ ] Hero subtext emphasizing practical, business-focused AI solutions
+- [ ] "Our Mission" section with headline: "Making Enterprise AI Accessible and Actionable"
+- [ ] Mission statement: "We believe AI should solve real business problems, not create new ones. Our mission is to bridge the gap between AI potential and practical implementation, delivering solutions that drive measurable results from day one."
+- [ ] Professional, clean layout with clear visual hierarchy
+- [ ] Responsive design
+- [ ] Proper typography and spacing
 
-**Note:** Use placeholder content if final content not available:
-- [Founder Name]
-- [Founder bio - 2-3 paragraphs about background, experience, vision]
-
-**Reference:** ProductRequirements.md §5.3.1, §8.3
+**Reference:** ProductRequirements.md §5.3.1 (sections 1-2)
 
 ---
 
-### Task 4.2: Build Achievements Section
+### Task 4.2: Build Our Values Section (4 Core Values)
 **Dependencies:** Task 4.1
 **Priority:** High
-**Estimated Effort:** 1-2 hours
+**Estimated Effort:** 2-3 hours
 
 **Description:**
-Create section displaying founder's key achievements and credentials.
+Create the "Our Values" section showcasing the 4 core company values with detailed descriptions.
 
 **Acceptance Criteria:**
-- [x] List of 3-5 key accomplishments
-- [x] Relevant experience highlighted
-- [x] Notable projects or credentials
-- [x] Visually appealing layout
-- [x] Icons or visual elements to enhance readability
-- [x] Responsive design
+- [ ] Section title: "Our Values"
+- [ ] All 4 values displayed with icons:
+  - **Practical Over Theoretical**: Solutions that work in the real world; measured by business impact
+  - **Partnership Over Consulting**: We build, deploy, and support; invested in long-term outcomes
+  - **Domain Expertise Matters**: Understand your industry first; AI is the tool, not the answer
+  - **Sustainable Innovation**: Designed for longevity and scalability; training and knowledge transfer built-in
+- [ ] Card-based or grid layout
+- [ ] Icons for each value (simple, modern)
+- [ ] Visually appealing layout with clear hierarchy
+- [ ] Responsive design (1 column mobile → 2 columns tablet → 4 columns desktop)
+- [ ] Consistent spacing and typography
 
-**Note:** Use placeholder if final content not available:
-- [List of 3-5 key achievements]
-
-**Reference:** ProductRequirements.md §5.3.1
+**Reference:** ProductRequirements.md §5.3.1 (section 3)
 
 ---
 
-### Task 4.3: Build Company Values Section (About Page)
-**Dependencies:** Task 2.4
-**Priority:** Medium
-**Estimated Effort:** 1-2 hours
+### Task 4.3: Build What Sets Us Apart Section
+**Dependencies:** Task 4.2
+**Priority:** High
+**Estimated Effort:** 2 hours
 
 **Description:**
-Reuse or adapt the company values component from the home page for the About page.
+Create the "What Sets Us Apart" section highlighting Jiuve's unique differentiators.
 
 **Acceptance Criteria:**
-- [x] Same 5 values as main page:
-  - Innovative
-  - Quality-Focused
-  - Minimalistic
-  - Efficient
-  - Responsible
-- [x] Expanded descriptions if needed
-- [x] Consistent with home page design
-- [x] Adapted layout for About page context
+- [ ] Section title: "What Sets Us Apart"
+- [ ] Three key differentiators presented:
+  - **Full-Stack AI Implementation**: From ideation workshops to production deployment; hardware integration, software development, and ongoing support; one partner for entire AI journey
+  - **Business-First Approach**: Start with ROI goals, not AI capabilities; solutions tailored to industry, scale, and constraints; measurable outcomes defined before development
+  - **Mid-Market Specialists**: Purpose-built for mid-sized businesses and corporations; enterprise-grade solutions without enterprise complexity; pricing and timelines designed for your reality
+- [ ] Card-based or columnar layout
+- [ ] Visual elements or icons to enhance each differentiator
+- [ ] Clear, scannable text
+- [ ] Responsive design
+- [ ] Proper spacing and typography
 
-**Note:** Completed during Task 4.1. Values section exists on About page with same content and consistent design as home page.
-
-**Reference:** ProductRequirements.md §5.3.1
+**Reference:** ProductRequirements.md §5.3.1 (section 4)
 
 ---
 
-### Task 4.4: Build Company Mission/Goal Section
-**Dependencies:** Task 1.5
+### Task 4.4: Build Our Commitment and Why We Exist Sections
+**Dependencies:** Task 4.3
 **Priority:** High
 **Estimated Effort:** 1-2 hours
 
 **Description:**
-Create section communicating company mission and vision.
+Create "Our Commitment" and "Why We Exist" sections to communicate responsible AI principles and company purpose.
 
 **Acceptance Criteria:**
-- [x] Mission statement: "Help power the new AI era through custom and innovative solutions"
-- [x] Vision for the future
-- [x] Why Jiuve exists
-- [x] Authentic, personal tone while maintaining professionalism
-- [x] Inspiring and engaging content
-- [x] Proper visual hierarchy
+- [ ] "Our Commitment" section with headline
+- [ ] Commitment statement: "We're committed to responsible AI deployment that:"
+  - Augments human capabilities rather than replacing them
+  - Respects data privacy and security
+  - Delivers transparent, explainable results
+  - Creates measurable business value
+- [ ] "Why We Exist" section
+- [ ] Purpose statement: "We exist to make AI work for mid-sized businesses. We combine deep technical expertise with hands-on implementation, delivering complete AI solutions from ideation through deployment. Our approach is simple: understand your business, build what actually works, and ensure you can sustain it."
+- [ ] Clear, professional layout
+- [ ] Visual elements to enhance readability (borders, background colors, or icons)
+- [ ] Responsive design
+- [ ] Proper spacing and typography
 
-**Note:** Completed during Task 4.1. Mission section exists with prominent mission statement, explanation of why Jiuve exists ("We don't just consult—we build"), and vision for partnering with businesses.
-
-**Reference:** ProductRequirements.md §5.3.1
+**Reference:** ProductRequirements.md §5.3.1 (sections 5-6)
 
 ---
 
-### Task 4.5: About Page Integration and Polish
+### Task 4.5: Build Call-to-Action and Complete Page Integration
 **Dependencies:** Tasks 4.1, 4.2, 4.3, 4.4
 **Priority:** High
 **Estimated Effort:** 2 hours
 
 **Description:**
-Integrate all About page sections and ensure cohesive flow.
+Add the final call-to-action section and integrate all About page sections ensuring cohesive flow.
 
 **Acceptance Criteria:**
-- [x] All sections integrated
-- [x] Single column, scannable layout
-- [x] Consistent spacing and typography
-- [x] Professional photography integrated (if available)
-- [x] Mix of text and visual elements
-- [x] Responsive on all breakpoints
-- [x] Smooth reading experience
+- [ ] Call-to-Action section with:
+  - Text: "Ready to explore what AI can do for your business?"
+  - Button linking to /contact page
+- [ ] All sections integrated with proper flow:
+  - Hero → Our Mission → Our Values → What Sets Us Apart → Our Commitment → Why We Exist → Call-to-Action
+- [ ] Clean, scannable layout with clear section divisions
+- [ ] Consistent spacing between sections (64px mobile, 96px desktop)
+- [ ] Mix of text and visual elements throughout
+- [ ] Responsive on all breakpoints
+- [ ] Smooth reading experience
+- [ ] Professional, confident tone maintained
+- [ ] All sections accessible with proper semantic HTML
 
-**Implementation Notes:**
-- Page structure: Header → Founder Info → Achievements → Mission → Values
-- Consistent mb-24 spacing between major sections
-- Responsive layouts: Founder (1→3 cols), Achievements (1→2→3 cols), Values (1→2→3→5 cols)
-- Mix of visual elements: icons, photo placeholder, cards, bordered content
-- All icons properly marked with aria-hidden="true"
-- Build verified successfully
-
-**Reference:** ProductRequirements.md §5.3.1
+**Reference:** ProductRequirements.md §5.3.1 (section 7 and layout requirements)
 
 ---
 
@@ -832,7 +830,7 @@ Phase 1 (Foundation)
 ├── 1.1 → 1.2, 1.3, 1.6
 ├── 1.3 → 1.4
 ├── 1.4 → 1.5, 2.3, 2.4, 2.5, 3.1
-└── 1.5 → 2.1, 2.2, 4.1, 4.4
+└── 1.5 → 2.1, 2.2, 4.1
 
 Phase 2 (Home Page)
 ├── 2.1, 2.2, 2.3, 2.4, 2.5 → 2.6
@@ -845,7 +843,8 @@ Phase 3 (Contact Page)
 
 Phase 4 (About Page)
 ├── 4.1 → 4.2
-├── 2.4 → 4.3
+├── 4.2 → 4.3
+├── 4.3 → 4.4
 ├── 4.1, 4.2, 4.3, 4.4 → 4.5
 
 Phase 5 (Polish)
