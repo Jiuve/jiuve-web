@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
+import { Button } from '@/components/ui/Button';
 
 export const metadata: Metadata = {
   title: 'About Jiuve - Making Enterprise AI Accessible',
@@ -459,6 +461,28 @@ export default function AboutPage() {
                 delivering complete AI solutions from ideation through deployment. Our approach is simple: understand your business,
                 build what actually works, and ensure you can sustain it.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Call-to-Action Section */}
+      <section className="py-16 md:py-24">
+        <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="mb-8">Ready to explore what AI can do for your business?</h2>
+            <p
+              className="text-lg md:text-xl mb-10 max-w-2xl mx-auto"
+              style={{ color: 'var(--color-secondary)' }}
+            >
+              Let's discuss how we can help you transform your business challenges into AI opportunities.
+            </p>
+            <div className="flex justify-center">
+              <Link href="/contact">
+                <Button variant="primary" className="text-lg px-12 py-4">
+                  Get Started
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
