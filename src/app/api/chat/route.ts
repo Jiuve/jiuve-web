@@ -35,23 +35,45 @@ Be conversational, helpful, and aim to qualify leads by understanding their need
     // Convert UIMessage[] to ModelMessage[] format
     const modelMessages = convertToModelMessages(messages);
 
+    // Use the correct Claude 3.5 Sonnet model name
     const result = await streamText({
-      model: anthropic('claude-3-5-sonnet-20241022'),
+      model: anthropic('claude-3-5-sonnet-20240620'),
       messages: modelMessages,
       system: systemPrompt,
       temperature: 0.7,
     });
 
     return result.toTextStreamResponse();
-  } catch (error) {
+  } catch (error: any) {
     console.error('Chat API Error:', error);
+
+    // Handle different types of errors
+    let statusCode = 500;
+    let errorMessage = 'Failed to process chat request';
+    let errorDetails = error instanceof Error ? error.message : 'Unknown error';
+
+    // Check if it's an API call error (from Anthropic)
+    if (error.name === 'AI_APICallError') {
+      statusCode = error.statusCode || 500;
+      errorMessage = 'AI Service Error';
+      errorDetails = error.message;
+
+      // Log the full error for debugging
+      console.error('Anthropic API Error Details:', {
+        statusCode: error.statusCode,
+        responseBody: error.responseBody,
+        url: error.url,
+      });
+    }
+
     return new Response(
       JSON.stringify({
-        error: 'Failed to process chat request',
-        details: error instanceof Error ? error.message : 'Unknown error'
+        error: errorMessage,
+        details: errorDetails,
+        statusCode: statusCode,
       }),
       {
-        status: 500,
+        status: statusCode,
         headers: { 'Content-Type': 'application/json' }
       }
     );

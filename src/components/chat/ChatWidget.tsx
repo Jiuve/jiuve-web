@@ -9,7 +9,7 @@ export default function ChatWidget() {
   const [input, setInput] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  const { messages, status, sendMessage } = useChat({
+  const { messages, status, sendMessage, error } = useChat({
     transport: new DefaultChatTransport({
       api: '/api/chat',
     }),
@@ -24,6 +24,7 @@ export default function ChatWidget() {
   };
 
   const isLoading = status === 'streaming';
+  const hasError = status === 'error' || error;
 
   // Auto-scroll to bottom when new messages arrive
   useEffect(() => {
@@ -213,6 +214,34 @@ export default function ChatWidget() {
                             animationDelay: '300ms',
                           }}
                         />
+                      </div>
+                    </div>
+                  </div>
+                )}
+                {hasError && (
+                  <div className="flex justify-start">
+                    <div
+                      className="rounded-lg px-4 py-2"
+                      style={{
+                        backgroundColor: '#FEE',
+                        border: '1px solid var(--color-error)',
+                        fontSize: 'var(--font-size-small)',
+                        lineHeight: 'var(--line-height-relaxed)',
+                      }}
+                    >
+                      <div className="flex items-start space-x-2">
+                        <span style={{ color: 'var(--color-error)' }}>⚠️</span>
+                        <div>
+                          <div
+                            className="font-semibold"
+                            style={{ color: 'var(--color-error)' }}
+                          >
+                            Error
+                          </div>
+                          <div style={{ color: '#C00' }}>
+                            {error?.message || 'Failed to get response. Please try again.'}
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
