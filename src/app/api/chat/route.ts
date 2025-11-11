@@ -1,5 +1,5 @@
 import { anthropic } from '@ai-sdk/anthropic';
-import { streamText } from 'ai';
+import { streamText, convertToModelMessages } from 'ai';
 
 // Allow streaming responses up to 30 seconds
 export const maxDuration = 30;
@@ -32,9 +32,12 @@ Key differentiators of Jiuve:
 
 Be conversational, helpful, and aim to qualify leads by understanding their needs before directing them to the contact page.`;
 
+    // Convert UIMessage[] to ModelMessage[] format
+    const modelMessages = convertToModelMessages(messages);
+
     const result = await streamText({
       model: anthropic('claude-3-5-sonnet-20241022'),
-      messages,
+      messages: modelMessages,
       system: systemPrompt,
       temperature: 0.7,
     });
